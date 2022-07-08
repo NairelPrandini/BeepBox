@@ -1,3 +1,5 @@
+using System;
+
 namespace BeepBox
 {
     class Music
@@ -119,7 +121,7 @@ namespace BeepBox
         }
         public static void PlaySong(int Tempo)
         {
-            Bpms = Convert.ToInt32((60000 / Tempo) * 4);
+            Bpms = Convert.ToInt64((60000 / Tempo) * 4);
             Rest(Duration.Quarter);
             PlayNote(Notes.C4, Duration.Eighth);
             PlayNote(Notes.Eb4, Duration.Eighth);
